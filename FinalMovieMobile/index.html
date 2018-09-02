@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<!---Bringing in Angular-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--Making UI responive. Adjusts to the screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div id="quiz">
+            
+            <h1>Movie Trivia</h1>
+            <hr style="margin-bottom: 20px">
+            <!--Using angular to get player/user name-->
+            <div ng-app="">
+                <p>Player Name : <input type="text" ng-model  ="name" placeholder="Enter name here"></p>
+                <!--Displays entered data & gets player ready-->
+                <h3> {{name}} - Ready. Set. GO!</h3>
+            </div>
+
+            <p id="question"></p>
+            <!--giving buttons and id & Span = grouping users choices-->
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <!-- creating horizontal line (aesthetics only)-->
+            <hr style="margin-top: 50px">
+            <!--displaying number of rounds-->
+            <footer>
+                <p id="progress">Round x of y</p>
+            </footer>
+        </div>
+    </div>
+
+    <!--Using/ calling the .js used-->
+<script src="quiz.js"></script>
+<script src="question.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
